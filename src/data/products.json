@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "image": "/src/assets/images/product-images/product-01.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 25
+  },
+  {
+    "id": 2,
+    "image": "/src//assets/images/product-images/product-02.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": false,
+    "hasDiscount": true,
+    "discountPercentage": 50
+  },
+  {
+    "id": 3,
+    "image": "/src//assets/images/product-images/product-03.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 50
+  },
+  {
+    "id": 4,
+    "image": "/src//assets/images/product-images/product-04.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": false,
+    "hasDiscount": false,
+    "discountPercentage": 0
+  },
+  {
+    "id": 5,
+    "image": "/src//assets/images/product-images/product-05.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 50
+  },
+  {
+    "id": 6,
+    "image": "/src//assets/images/product-images/product-06.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": true,
+    "hasDiscount": false,
+    "discountPercentage": 0
+  },
+  {
+    "id": 7,
+    "image": "/src//assets/images/product-images/product-07.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 35
+  },
+  {
+    "id": 8,
+    "image": "/src/assets/images/product-images/product-08.png",
+    "title": "Product Name & Description",
+    "price": 28.8,
+    "oldPrice": 48.8,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 25
+  }
+]

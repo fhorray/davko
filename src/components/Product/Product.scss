@@ -1,0 +1,82 @@
+.item {
+  @include flex(column, space-between, start);
+  gap: 1.4rem;
+
+  h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $brand-text;
+  }
+
+  .image-box {
+    position: relative;
+    width: 28rem;
+    height: 38.6rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      @include transition(0.3s);
+    }
+    &:hover {
+      img {
+        transform: scale(1.05) rotate(0.6deg);
+      }
+    }
+    .new {
+      position: absolute;
+      top: 1.4rem;
+      left: 1.4rem;
+      background-color: $brand-yellow;
+      border-radius: 0.4rem;
+      padding: 0.45rem 0.95rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: $brand-text;
+    }
+    .discount-tag {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.4rem;
+      background-color: $brand-red;
+      border-radius: 0.4rem;
+      padding: 0.45rem 0.95rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: $brand-text;
+    }
+  }
+  .price-info {
+    @include flex(row, space-between, center);
+    gap: 2rem;
+
+    span,
+    del {
+      font-family: "Inter";
+      font-style: normal;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+    span {
+      font-weight: 700;
+      color: $brand-text;
+    }
+    del {
+      font-family: "Inter";
+      font-weight: 400;
+      text-decoration-line: line-through;
+      color: #8a8a8a;
+    }
+  }
+}

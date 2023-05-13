@@ -1,0 +1,65 @@
+.main-message {
+  background-color: $brand-black;
+  width: 100%;
+  padding: 1.4rem;
+  color: #fff;
+
+  .container {
+    @include flex(row, center, center);
+    gap: 2.5rem;
+    opacity: 0.7;
+  }
+  .line {
+    width: 10rem;
+    height: 0.1rem;
+    background-color: #fff;
+  }
+  .learn-more {
+    a {
+      gap: 0.5rem;
+      @include flex(row, center, center);
+      color: inherit;
+    }
+  }
+}
+
+header {
+  padding: 4.4rem;
+  margin-bottom: 2.4rem;
+  .container {
+    @include flex(row, space-between, center);
+  }
+
+  .navbar {
+    ul {
+      @include flex(row, space-between, center);
+      li {
+        a {
+          color: inherit;
+          padding: 1.5rem 2rem;
+          @include transition(0.1s);
+          color: $brand-text;
+          &:hover {
+            background-color: $light-gray;
+          }
+        }
+      }
+    }
+  }
+  .right-icons {
+    @include flex(row, space-between, center);
+    gap: 0.5rem;
+    li {
+      padding: 1.5rem;
+      @include transition(0.1s);
+      &:hover {
+        cursor: pointer;
+        background-color: $light-gray;
+      }
+    }
+  }
+
+  .logo {
+    margin-left: -11rem;
+  }
+}

@@ -1,0 +1,19 @@
+@import "./reset";
+@import "./grid";
+@import "./variables";
+@import "./mixins";
+
+// COMPONENTS
+@import "../../components/Header/Header.scss";
+@import "../../components/Banner/Banner.scss";
+@import "../../components/Benefit/Benefit.scss";
+@import "../../components/Product/Product.scss";
+@import "../../components/SectionTitle/SectionTitle.scss";
+@import "../../components/ProductList/ProductList.scss";
+@import "../../components/Footer/Footer.scss";
+
+// MODAIS
+@import "../../components/AccountModal/AccountModal.scss";
+
+// Buttons
+@import "../../components/PrimaryButton/PrimaryButton.scss";

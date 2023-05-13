@@ -1,0 +1,12 @@
+// FLEX
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// TRANSITION
+@mixin transition($time) {
+  transition: all $time ease-in;
+}

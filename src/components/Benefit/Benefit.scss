@@ -1,0 +1,16 @@
+.benefits {
+  ul {
+    @include flex(row, space-between, center);
+    li {
+      width: 100%;
+      @include flex(row, center, center);
+      gap: 1.4rem;
+      padding: 4rem;
+      border: 1px solid $border-gray;
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-right: none;
+      }
+    }
+  }
+}

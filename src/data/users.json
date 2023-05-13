@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Francy Santos",
+    "email": "francy@gmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 2,
+    "name": "Lucas Oliveira",
+    "email": "lucas@gmail.com",
+    "password": "abcdef"
+  },
+  {
+    "id": 3,
+    "name": "Maria Silva",
+    "email": "maria@gmail.com",
+    "password": "qwerty"
+  },
+  {
+    "id": 4,
+    "name": "João Souza",
+    "email": "joao@gmail.com",
+    "password": "password123"
+  }
+]

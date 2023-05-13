@@ -1,0 +1,8 @@
+footer {
+  padding: 5.5rem 0;
+  background-color: $light-gray;
+  .container {
+    @include flex(column, space-between, center);
+    gap: 1rem;
+  }
+}

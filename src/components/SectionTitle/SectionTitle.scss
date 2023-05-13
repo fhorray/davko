@@ -1,0 +1,21 @@
+.text {
+  padding: 4rem 0;
+  @include flex(column, space-between, center);
+  gap: 2rem;
+
+  h2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    color: $brand-text;
+  }
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
