@@ -15,24 +15,30 @@ const AccountModal = ({ setOpenAcc }) => {
   let [formValue, setFormValue] = useState({ email: "", password: "" });
 
   const getEmail = (e) => {
-    return (formValue.email = e.target.value);
+    formValue.email = e.target.value;
   };
   const getPassword = (e) => {
-    return (formValue.password = e.target.value);
+    formValue.password = e.target.value;
   };
 
   // VERIFICAÇÃO DE LOGIN E SENHA
   const verifyUserData = () => {
     const emails = Users.map((user) => user.email);
     const passwords = Users.map((user) => user.password);
+    const names = Users.map((user) => user.name);
+    const ids = Users.map((user) => user.id);
 
-    if (
+    if (formValue.email === "" || formValue.password === "") {
+      alert("Preencha seu email");
+    } else if (
       emails.includes(formValue.email) &&
       passwords.includes(formValue.password)
     ) {
-      console.log("Usuario Logado!");
+      console.log(`Bem vindo USUARIO`);
+      return true;
     } else {
       console.log("Login e senha incorretos!");
+      return false;
     }
   };
 
