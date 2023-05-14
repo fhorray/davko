@@ -2,7 +2,7 @@
   {
     "id": 1,
     "image": "/src/assets/images/product-images/product-01.png",
-    "title": "Product Name & Description",
+    "title": "Striped Button-Up Shirt",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": true,
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "image": "/src/assets/images/product-images/product-02.png",
-    "title": "Product Name & Description",
+    "title": "Denim Jeans",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": false,
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "image": "/src/assets/images/product-images/product-03.png",
-    "title": "Product Name & Description",
+    "title": "Floral Print Dress",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": true,
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "image": "/src/assets/images/product-images/product-04.png",
-    "title": "Product Name & Description",
+    "title": "Black Trousers",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": false,
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "image": "/src/assets/images/product-images/product-05.png",
-    "title": "Product Name & Description",
+    "title": "Striped Maxi Skirt",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": true,
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "image": "/src/assets/images/product-images/product-06.png",
-    "title": "Product Name & Description",
+    "title": "Basic White T-shirt",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": true,
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "image": "/src/assets/images/product-images/product-07.png",
-    "title": "Product Name & Description",
+    "title": "Plaid Flannel Shirt",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": true,
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "image": "/src/assets/images/product-images/product-08.png",
-    "title": "Product Name & Description",
+    "title": "Casual Striped Dress",
     "price": 28.8,
     "oldPrice": 48.8,
     "isNew": true,

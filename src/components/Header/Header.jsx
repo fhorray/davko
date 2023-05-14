@@ -1,21 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../../assets/images/davko-logo.svg";
 import ArrowRight from "../../assets/images/arrow-right.svg";
 import UserIcon from "../../assets/images/user.svg";
 import SearchIcon from "../../assets/images/search.svg";
 import CartIcon from "../../assets/images/shopping-bag-line.svg";
+import Cart from "../Cart/Cart.jsx";
 
 // SASS
 import "../../assets/sass/main.scss";
 import AccountModal from "../AccountModal/AccountModal";
 
 const Header = () => {
-  // useState Account Modal
-  let [openAcc, setOpenAcc] = useState(false);
+  // ACCOUNT MODAL
+  let [openAcc, setOpenAcc] = React.useState(false);
 
   function openModalAccount() {
     setOpenAcc(true);
-    handleChangeImage();
+  }
+
+  // CART MODAL
+  let [openCart, setOpenCart] = React.useState(false);
+
+  function openCartModal() {
+    setOpenCart(!openCart);
   }
 
   return (
@@ -66,10 +73,12 @@ const Header = () => {
             <li onClick={openModalAccount}>
               <img src={UserIcon} alt="User Icon" />
             </li>
-            <li>
+            <li onClick={openCartModal}>
               <img src={CartIcon} alt="Cart Icon" />
             </li>
           </ul>
+          {/* CART */}
+          {openCart ? <Cart setOpenCart={setOpenCart} /> : ""}
         </div>
       </header>
     </>

@@ -27,6 +27,7 @@ header {
   padding: 4.4rem;
   margin-bottom: 2.4rem;
   .container {
+    position: relative;
     @include flex(row, space-between, center);
   }
 

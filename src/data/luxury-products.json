@@ -2,17 +2,17 @@
   {
     "id": 9,
     "image": "/src/assets/images/product-images/product-09.png",
-    "title": "Product Name & Description",
+    "title": "Blue Striped Shirt",
     "price": 39.9,
     "oldPrice": 59.9,
-    "isNew": false,
+    "isNew": true,
     "hasDiscount": true,
     "discountPercentage": 33
   },
   {
     "id": 10,
     "image": "/src/assets/images/product-images/product-10.png",
-    "title": "Product Name & Description",
+    "title": "Black Dress",
     "price": 19.99,
     "oldPrice": 29.99,
     "isNew": false,
@@ -22,7 +22,7 @@
   {
     "id": 11,
     "image": "/src/assets/images/product-images/product-11.png",
-    "title": "Product Name & Description",
+    "title": "Leather Jacket",
     "price": 12.5,
     "oldPrice": 24.9,
     "isNew": true,
@@ -32,7 +32,7 @@
   {
     "id": 12,
     "image": "/src/assets/images/product-images/product-12.png",
-    "title": "Product Name & Description",
+    "title": "Floral Print Dress",
     "price": 15.99,
     "oldPrice": 19.99,
     "isNew": false,
@@ -42,7 +42,7 @@
   {
     "id": 13,
     "image": "/src/assets/images/product-images/product-13.png",
-    "title": "Product Name & Description",
+    "title": "Striped Polo Shirt",
     "price": 9.99,
     "oldPrice": 14.99,
     "isNew": false,
@@ -52,31 +52,31 @@
   {
     "id": 14,
     "image": "/src/assets/images/product-images/product-14.png",
-    "title": "Product Name & Description",
+    "title": "Denim Jacket",
     "price": 49.99,
     "oldPrice": 59.99,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 16.7
+    "discountPercentage": 15
   },
   {
     "id": 15,
     "image": "/src/assets/images/product-images/product-15.png",
-    "title": "Product Name & Description",
+    "title": "Striped Maxi Dress",
     "price": 34.5,
     "oldPrice": 44.5,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 22.5
+    "discountPercentage": 25
   },
   {
     "id": 16,
     "image": "/src/assets/images/product-images/product-16.png",
-    "title": "Product Name & Description",
+    "title": "Cotton T-shirt",
     "price": 34.5,
     "oldPrice": 44.5,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 22.5
+    "discountPercentage": 25
   }
 ]

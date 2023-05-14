@@ -4,10 +4,11 @@ import Banner from "./components/Banner/Banner";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
 import ProductList from "./components/ProductList/ProductList";
 import Footer from "./components/Footer/Footer";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
       <Banner />
 
@@ -28,7 +29,7 @@ function App() {
 
       {/* FOOTER */}
       <Footer />
-    </>
+    </div>
   );
 }
 

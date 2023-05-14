@@ -1,4 +1,5 @@
 import React from "react";
+import CartIcon from "../../assets/images/cart-icon.svg";
 
 const Product = (props) => {
   return (
@@ -17,6 +18,10 @@ const Product = (props) => {
         <span>${props.price}</span>
         <del>${props.oldPrice}</del>
       </div>
+      <a className="add-btn" href="#">
+        <img src={CartIcon} alt="Cart Icon" />
+        ADD
+      </a>
     </div>
   );
 };

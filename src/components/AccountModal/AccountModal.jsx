@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import imageModal1 from "../../assets/images/modal/modal-image-01.png";
+
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 // USERS DATA
