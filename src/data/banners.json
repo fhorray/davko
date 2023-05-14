@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "/src/assets/images/banner/banner1.png",
+    "text": "Discover your best, <br /> be the best.",
+    "hasDiscountMessage": true,
+    "discountPercentage": 50
+  },
+  {
+    "id": 2,
+    "image": "/src/assets/images/banner/banner2.png",
+    "text": "Unleash your creativity <br /> with our new collection.",
+    "hasDiscountMessage": false,
+    "discountPercentage": 50
+  },
+  {
+    "id": 3,
+    "image": "/src/assets/images/banner/banner3.png",
+    "text": "Upgrade your style <br /> with our latest arrivals.",
+    "hasDiscountMessage": true,
+    "discountPercentage": 25
+  },
+  {
+    "id": 4,
+    "image": "/src/assets/images/banner/banner4.png",
+    "text": "Experience comfort like <br />never before.",
+    "hasDiscountMessage": true,
+    "discountPercentage": 40
+  }
+]

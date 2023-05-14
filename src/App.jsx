@@ -12,8 +12,19 @@ function App() {
       <Banner />
 
       {/* NEW ARRIVALS */}
-      <SectionTitle title="New Arrivals" />
-      <ProductList />
+      <SectionTitle
+        title="New Arrivals"
+        hasDescription={true}
+        description={"Explore our new-in products"}
+      />
+      <ProductList listName="NewArrivals" />
+
+      <SectionTitle
+        title="Our Luxury Items"
+        hasDescription={false}
+        description={null}
+      />
+      <ProductList listName="LuxuryItems" />
 
       {/* FOOTER */}
       <Footer />

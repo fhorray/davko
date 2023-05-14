@@ -15,6 +15,7 @@ const Header = () => {
 
   function openModalAccount() {
     setOpenAcc(true);
+    handleChangeImage();
   }
 
   return (
@@ -62,8 +63,8 @@ const Header = () => {
             <li>
               <img src={SearchIcon} alt="Search Icon" />
             </li>
-            <li>
-              <img onClick={openModalAccount} src={UserIcon} alt="User Icon" />
+            <li onClick={openModalAccount}>
+              <img src={UserIcon} alt="User Icon" />
             </li>
             <li>
               <img src={CartIcon} alt="Cart Icon" />

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 9,
+    "image": "/src/assets/images/product-images/product-09.png",
+    "title": "Product Name & Description",
+    "price": 39.9,
+    "oldPrice": 59.9,
+    "isNew": false,
+    "hasDiscount": true,
+    "discountPercentage": 33
+  },
+  {
+    "id": 10,
+    "image": "/src/assets/images/product-images/product-10.png",
+    "title": "Product Name & Description",
+    "price": 19.99,
+    "oldPrice": 29.99,
+    "isNew": false,
+    "hasDiscount": true,
+    "discountPercentage": 33
+  },
+  {
+    "id": 11,
+    "image": "/src/assets/images/product-images/product-11.png",
+    "title": "Product Name & Description",
+    "price": 12.5,
+    "oldPrice": 24.9,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 50
+  },
+  {
+    "id": 12,
+    "image": "/src/assets/images/product-images/product-12.png",
+    "title": "Product Name & Description",
+    "price": 15.99,
+    "oldPrice": 19.99,
+    "isNew": false,
+    "hasDiscount": true,
+    "discountPercentage": 20
+  },
+  {
+    "id": 13,
+    "image": "/src/assets/images/product-images/product-13.png",
+    "title": "Product Name & Description",
+    "price": 9.99,
+    "oldPrice": 14.99,
+    "isNew": false,
+    "hasDiscount": true,
+    "discountPercentage": 33
+  },
+  {
+    "id": 14,
+    "image": "/src/assets/images/product-images/product-14.png",
+    "title": "Product Name & Description",
+    "price": 49.99,
+    "oldPrice": 59.99,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 16.7
+  },
+  {
+    "id": 15,
+    "image": "/src/assets/images/product-images/product-15.png",
+    "title": "Product Name & Description",
+    "price": 34.5,
+    "oldPrice": 44.5,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 22.5
+  },
+  {
+    "id": 16,
+    "image": "/src/assets/images/product-images/product-16.png",
+    "title": "Product Name & Description",
+    "price": 34.5,
+    "oldPrice": 44.5,
+    "isNew": true,
+    "hasDiscount": true,
+    "discountPercentage": 22.5
+  }
+]

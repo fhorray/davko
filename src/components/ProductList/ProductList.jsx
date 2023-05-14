@@ -1,12 +1,24 @@
 import React from "react";
 import Product from "../Product/Product";
-import Products from "../../data/products.json";
+import NewArrivals from "../../data/new-arrivals.json";
+import LuxuryItems from "../../data/luxury-products.json";
 
 const ProductList = (props) => {
+  const listName = props.listName;
+  let jsonContent;
+
+  if (listName === "NewArrivals") {
+    jsonContent = NewArrivals;
+  } else if (listName === "LuxuryItems") {
+    jsonContent = LuxuryItems;
+  } else {
+    jsonContent = [];
+  }
+
   return (
     <section className="product-list">
       <div className="container">
-        {Products.map((product) => (
+        {jsonContent.map((product) => (
           <Product
             image={product.image}
             title={product.title}

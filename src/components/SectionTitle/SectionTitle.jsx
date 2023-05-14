@@ -4,7 +4,7 @@ const SectionTitle = (props) => {
   return (
     <div className="text">
       <h2>{props.title}</h2>
-      <p>{props.description}</p>
+      <p>{props.hasDescription ? props.description : null}</p>
     </div>
   );
 };

@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "image": "/src//assets/images/product-images/product-02.png",
+    "image": "/src/assets/images/product-images/product-02.png",
     "title": "Product Name & Description",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "image": "/src//assets/images/product-images/product-03.png",
+    "image": "/src/assets/images/product-images/product-03.png",
     "title": "Product Name & Description",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "image": "/src//assets/images/product-images/product-04.png",
+    "image": "/src/assets/images/product-images/product-04.png",
     "title": "Product Name & Description",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "image": "/src//assets/images/product-images/product-05.png",
+    "image": "/src/assets/images/product-images/product-05.png",
     "title": "Product Name & Description",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "image": "/src//assets/images/product-images/product-06.png",
+    "image": "/src/assets/images/product-images/product-06.png",
     "title": "Product Name & Description",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -61,7 +61,7 @@
   },
   {
     "id": 7,
-    "image": "/src//assets/images/product-images/product-07.png",
+    "image": "/src/assets/images/product-images/product-07.png",
     "title": "Product Name & Description",
     "price": 28.8,
     "oldPrice": 48.8,

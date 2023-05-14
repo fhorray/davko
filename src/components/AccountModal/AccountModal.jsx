@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import imageModal1 from "../../assets/images/modal/modal-image-01.png";
@@ -7,21 +7,23 @@ import PrimaryButton from "../PrimaryButton/PrimaryButton";
 // USERS DATA
 import Users from "../../data/users.json";
 
-// GOOGLE & FACEBOOK ICONS
+// MODAL IMAGES
+import ModalImages from "../../data/acc-modal-images.json";
+
+// ICONS
 import GoogleIcon from "../../assets/images/google-icon.svg";
 import FacebookIcon from "../../assets/images/facebook-icon.svg";
 
 const AccountModal = ({ setOpenAcc }) => {
-  let [formValue, setFormValue] = useState({ email: "", password: "" });
-
+  // LOGIN AND PASSWORD VERIFICATION
+  let [formValue, setFormValue] = React.useState({ email: "", password: "" });
   const getEmail = (e) => {
-    formValue.email = e.target.value;
+    setFormValue({ ...formValue, email: e.target.value });
   };
   const getPassword = (e) => {
-    formValue.password = e.target.value;
+    setFormValue({ ...formValue, password: e.target.value });
   };
 
-  // VERIFICAÇÃO DE LOGIN E SENHA
   const verifyUserData = () => {
     const emails = Users.map((user) => user.email);
     const passwords = Users.map((user) => user.password);
@@ -40,6 +42,12 @@ const AccountModal = ({ setOpenAcc }) => {
       console.log("Login e senha incorretos!");
       return false;
     }
+  };
+
+  // CHANGE MODAL IMAGE
+  const handleChangeImage = () => {
+    const randomImage = Math.floor(Math.random() * ModalImages.length);
+    return ModalImages[randomImage];
   };
 
   return (
@@ -100,7 +108,7 @@ const AccountModal = ({ setOpenAcc }) => {
 
         {/* IMAGE AREA */}
         <div className="image-area">
-          <img src={imageModal1} alt="Modal Image" />
+          <img src={handleChangeImage()} alt="Modal Image" />
         </div>
       </div>
     </div>
