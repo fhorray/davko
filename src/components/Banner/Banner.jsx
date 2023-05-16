@@ -24,10 +24,10 @@ const Banner = () => {
           slidesPerView={1}
           onSlideChange={() => null}
           loop={true}
-          // autoplay={{
-          //   delay: 4000, // Slide timer
-          //   disableOnInteraction: false, // Allow the autoplay continues when user press the slide
-          // }}
+          autoplay={{
+            delay: 5000, // Slide timer
+            disableOnInteraction: false, // Allow the autoplay continues when user press the slide
+          }}
           effect="fade"
         >
           {/* SLIDES */}
