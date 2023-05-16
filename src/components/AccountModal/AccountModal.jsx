@@ -18,18 +18,16 @@ const AccountModal = ({ setOpenAcc }) => {
   // LOGIN AND PASSWORD VERIFICATION
   let [formValue, setFormValue] = React.useState({ email: "", password: "" });
 
+  const getEmail = (e) => {
+    setFormValue({ ...formValue, email: e.target.value });
+  };
+  const getPassword = (e) => {
+    setFormValue({ ...formValue, password: e.target.value });
+  };
+
   const verifyUserData = () => {
     const emails = Users.map((user) => user.email);
     const passwords = Users.map((user) => user.password);
-    const names = Users.map((user) => user.name);
-    const ids = Users.map((user) => user.id);
-
-    const getEmail = (e) => {
-      setFormValue({ ...formValue, email: e.target.value });
-    };
-    const getPassword = (e) => {
-      setFormValue({ ...formValue, password: e.target.value });
-    };
 
     if (formValue.email === "" || formValue.password === "") {
       alert("Preencha seu email");
@@ -71,6 +69,7 @@ const AccountModal = ({ setOpenAcc }) => {
               name="email"
               id="email"
               placeholder="myaccount@email.com"
+              onBlur={getEmail}
             />
 
             <label htmlFor="password">Password:</label>
@@ -79,6 +78,7 @@ const AccountModal = ({ setOpenAcc }) => {
               name="password"
               id="password"
               placeholder="Your password"
+              onBlur={getPassword}
             />
             <PrimaryButton title="Login" formValue={verifyUserData} />
           </form>
