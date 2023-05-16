@@ -9,6 +9,7 @@
   z-index: 888;
   background-color: #fff;
   border: 1px solid $brand-black;
+  overflow: auto;
 
   li {
     @include flex(row, space-between, start);

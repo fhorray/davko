@@ -24,10 +24,10 @@ const Banner = () => {
           slidesPerView={1}
           onSlideChange={() => null}
           loop={true}
-          autoplay={{
-            delay: 4000, // Slide timer
-            disableOnInteraction: false, // Allow the autoplay continues when user press the slide
-          }}
+          // autoplay={{
+          //   delay: 4000, // Slide timer
+          //   disableOnInteraction: false, // Allow the autoplay continues when user press the slide
+          // }}
           effect="fade"
         >
           {/* SLIDES */}
@@ -36,18 +36,20 @@ const Banner = () => {
               <SwiperSlide key={banner.id}>
                 <div className="banner">
                   <img src={banner.image} alt={"Banner " + banner.id} />
-                  <h1 dangerouslySetInnerHTML={{ __html: banner.text }}></h1>
-                  {banner.hasDiscountMessage ? (
-                    <div className="discount-message">
-                      <p>
-                        Discount
-                        <span className="percentage">
-                          up to {banner.discountPercentage}%
-                        </span>{" "}
-                        on all items.
-                      </p>
-                    </div>
-                  ) : null}
+                  <div className="banner-info">
+                    <h1 dangerouslySetInnerHTML={{ __html: banner.text }}></h1>
+                    {banner.hasDiscountMessage ? (
+                      <div className="discount-message">
+                        <p>
+                          Discount
+                          <span className="percentage">
+                            up to {banner.discountPercentage}%
+                          </span>{" "}
+                          on all items.
+                        </p>
+                      </div>
+                    ) : null}
+                  </div>
                 </div>
               </SwiperSlide>
             );
