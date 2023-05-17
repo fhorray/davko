@@ -1,5 +1,5 @@
 import React from "react";
-import CartIcon from "../../assets/images/cart-icon.svg";
+import AddButton from "../AddButton/AddButton";
 
 const Product = (props) => {
   return (
@@ -9,19 +9,14 @@ const Product = (props) => {
         {props.isNew ? <span className="new">New</span> : ""}
         {props.hasDiscount ? (
           <span className="discount-tag">-{props.discountPercentage}% OFF</span>
-        ) : (
-          ""
-        )}
+        ) : null}
       </div>
       <h3>{props.title}</h3>
       <div className="price-info">
         <span>${props.price}</span>
         <del>${props.oldPrice}</del>
       </div>
-      <a className="add-btn" href="#">
-        <img src={CartIcon} alt="Cart Icon" />
-        ADD
-      </a>
+      <AddButton />
     </div>
   );
 };
