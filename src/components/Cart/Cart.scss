@@ -1,63 +1,98 @@
-.cart-container {
-  width: 100%;
-  max-width: 41rem;
+.cart {
   position: absolute;
   right: 1.4rem;
-  height: 49.5rem;
-  padding: 2rem 1.5rem;
   top: 5.3rem;
+  width: 100%;
+  max-width: 41rem;
   z-index: 888;
-  background-color: #fff;
-  border: 1px solid $brand-black;
-  overflow: auto;
+  box-shadow: 0 3rem 5rem 0 rgba($brand-black, 0.2);
+  .cart-list {
+    height: 49.5rem;
+    padding: 2rem 1.5rem;
+    background-color: #fff;
+    overflow: auto;
+    margin-bottom: 4rem;
 
-  li {
-    @include flex(row, space-between, start);
-    gap: 2rem;
-    padding: 2rem 0;
-    border-bottom: 1px solid rgba(96, 104, 125, 0.3);
+    li {
+      @include flex(row, space-between, start);
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(96, 104, 125, 0.3);
 
-    .image-container {
-      width: 100%;
-      max-width: 13rem;
-      height: 100%;
-      overflow: hidden;
-      img {
-        object-fit: cover;
-        object-position: center;
+      .image-container {
+        width: 100%;
+        max-width: 13rem;
+        height: 100%;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .product-info {
+        width: 100%;
+        @include flex(column, space-between, start);
+
+        .size-color {
+          @include flex(column, space-between, start);
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+          color: #60687d;
+          margin: 1rem 0;
+        }
+
+        .quantity-value {
+          width: 100%;
+          @include flex(row, space-between, center);
+
+          .quantity {
+            border: 1px solid rgba(#60687d, 0.5);
+            padding: 0.7rem 1.8rem;
+          }
+
+          .value {
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: $brand-black;
+          }
+        }
       }
     }
+  }
 
-    .product-info {
-      width: 100%;
-      @include flex(column, space-between, start);
+  .buttons {
+    background-color: #fff;
+    width: 100%;
+    @include flex(row, center, center);
+    gap: 1.3rem;
+    padding: 2rem 0;
+    margin-top: -6rem;
 
-      .size-color {
-        @include flex(column, space-between, start);
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-        color: #60687d;
-        margin: 1rem 0;
+    position: absolute;
+    bottom: 0;
+
+    .btn {
+      color: $brand-text;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      border-radius: 100rem;
+      padding: 1.3rem 3.2rem;
+      &.white {
+        border: 1px solid $brand-black;
       }
-
-      .quantity-value {
-        width: 100%;
-        @include flex(row, space-between, center);
-
-        .quantity {
-          border: 1px solid rgba(#60687d, 0.5);
-          padding: 0.7rem 1.8rem;
-        }
-
-        .value {
-          font-weight: 700;
-          font-size: 1.6rem;
-          line-height: 1.9rem;
-          color: $brand-black;
-        }
+      &.black {
+        background-color: $brand-black;
+        color: #fff;
+        border: 1px solid $brand-black;
+        padding: 1.3rem 4.5rem;
       }
     }
   }

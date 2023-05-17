@@ -12,7 +12,7 @@ const Cart = () => {
       discountPercentage: 33,
       color: "Black",
       size: ["P", "M", "G", "GG"],
-      quantity: 3,
+      quantity: 10,
     },
     {
       id: 9,
@@ -53,30 +53,43 @@ const Cart = () => {
     },
   ]);
 
+  const totalItems = cartItem.reduce(
+    (accumulator, currentProduct) => accumulator + currentProduct.quantity,
+    0
+  );
+
   return (
-    <ul className="cart-container">
-      {cartItem.map((product) => (
-        <li>
-          <div className="image-container">
-            <img src={product.image} alt="Image Cart" />
-          </div>
-          <div className="product-info">
-            <h5>{product.title}</h5>
-            <span>ID: {product.id}</span>
-            <div className="size-color">
-              <span>Color: {product.color}</span>
-              <span>Size: {product.size[1]}</span>
+    <div className="cart">
+      <div className="buttons">
+        <a className="btn white" href="#">
+          View Bag ({totalItems})
+        </a>
+        <a className="btn black" href="#">
+          Checkout
+        </a>
+      </div>
+      <ul className="cart-list">
+        {cartItem.map(({ image, title, id, color, size, price, quantity }) => (
+          <li>
+            <div className="image-container">
+              <img src={image} alt="Image Cart" />
             </div>
-            <div className="quantity-value">
-              <span className="quantity">{product.quantity}</span>
-              <span className="value">
-                ${Math.floor(product.price * product.quantity)}
-              </span>
+            <div className="product-info">
+              <h5>{title}</h5>
+              <span>ID: {id}</span>
+              <div className="size-color">
+                <span>Color: {color}</span>
+                <span>Size: {size[1]}</span>
+              </div>
+              <div className="quantity-value">
+                <span className="quantity">{quantity}</span>
+                <span className="value">${Math.floor(price * quantity)}</span>
+              </div>
             </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

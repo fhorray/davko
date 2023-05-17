@@ -8,7 +8,7 @@ import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Banner />
 
@@ -29,7 +29,7 @@ function App() {
 
       {/* FOOTER */}
       <Footer />
-    </div>
+    </>
   );
 }
 
