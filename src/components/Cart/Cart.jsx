@@ -1,60 +1,15 @@
 import React from "react";
-import product01 from "../../assets/images/product-images/product-01.png";
+import Product from "../Product/Product";
+import { CartContext } from "../../context/cartContext";
 
 const Cart = () => {
-  const [cartItem, setCartItem] = React.useState([
-    {
-      id: 89,
-      image: "/src/assets/images/product-images/product-08.png",
-      title: "Blue Striped Shirt",
-      price: 39.9,
-      hasDiscount: true,
-      discountPercentage: 33,
-      color: "Black",
-      size: ["P", "M", "G", "GG"],
-      quantity: 10,
-    },
-    {
-      id: 9,
-      image: "/src/assets/images/product-images/product-09.png",
-      title: "Blue Striped Shirt",
-      price: 39.9,
-      hasDiscount: true,
-      discountPercentage: 33,
-      color: "Black",
-      size: ["P", "M", "G", "GG"],
-      quantity: 3,
-    },
-    {
-      id: 10,
-      image: "/src/assets/images/product-images/product-10.png",
-      title: "Black Dress",
-      price: 19.99,
-      oldPrice: 29.99,
-      isNew: false,
-      hasDiscount: true,
-      discountPercentage: 33,
-      color: "Pink",
-      size: ["P", "M", "G", "GG"],
-      quantity: 5,
-    },
-    {
-      id: 11,
-      image: "/src/assets/images/product-images/product-11.png",
-      title: "Leather Jacket",
-      price: 12.5,
-      oldPrice: 24.9,
-      isNew: true,
-      hasDiscount: true,
-      discountPercentage: 50,
-      color: "Red",
-      size: ["P", "M", "G", "GG"],
-      quantity: 8,
-    },
-  ]);
+  const { cartItems, clearCart, removeFromCart } =
+    React.useContext(CartContext);
+  console.log(cartItems);
 
-  const totalItems = cartItem.reduce(
-    (accumulator, currentProduct) => accumulator + currentProduct.quantity,
+  // TOTAL ITEMS
+  const totalItems = cartItems.reduce(
+    (sum, currentProduct) => sum + currentProduct.quantity,
     0
   );
 
@@ -69,24 +24,19 @@ const Cart = () => {
         </a>
       </div>
       <ul className="cart-list">
-        {cartItem.map(({ image, title, id, color, size, price, quantity }) => (
-          <li>
-            <div className="image-container">
-              <img src={image} alt="Image Cart" />
-            </div>
-            <div className="product-info">
-              <h5>{title}</h5>
-              <span>ID: {id}</span>
-              <div className="size-color">
-                <span>Color: {color}</span>
-                <span>Size: {size[1]}</span>
-              </div>
-              <div className="quantity-value">
-                <span className="quantity">{quantity}</span>
-                <span className="value">${Math.floor(price * quantity)}</span>
-              </div>
-            </div>
-          </li>
+        {cartItems.map(({ image, title, id, color, size, price, quantity }) => (
+          <Product
+            id={id}
+            key={id}
+            inCart={true}
+            image={image}
+            title={title}
+            price={price}
+            quantity={quantity}
+            size={size[0]}
+            color={color}
+            oldPrice={false}
+          />
         ))}
       </ul>
     </div>

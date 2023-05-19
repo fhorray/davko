@@ -5,10 +5,11 @@ import SectionTitle from "./components/SectionTitle/SectionTitle";
 import ProductList from "./components/ProductList/ProductList";
 import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
+import { CartProvider } from "./context/cartContext";
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <Header />
       <Banner />
 
@@ -29,7 +30,7 @@ function App() {
 
       {/* FOOTER */}
       <Footer />
-    </>
+    </CartProvider>
   );
 }
 

@@ -7,7 +7,9 @@
     "oldPrice": 48.8,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 25
+    "discountPercentage": 25,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   },
   {
     "id": 2,
@@ -17,7 +19,9 @@
     "oldPrice": 48.8,
     "isNew": false,
     "hasDiscount": true,
-    "discountPercentage": 50
+    "discountPercentage": 50,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   },
   {
     "id": 3,
@@ -27,7 +31,9 @@
     "oldPrice": 48.8,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 50
+    "discountPercentage": 50,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   },
   {
     "id": 4,
@@ -37,7 +43,9 @@
     "oldPrice": 48.8,
     "isNew": false,
     "hasDiscount": false,
-    "discountPercentage": 0
+    "discountPercentage": 0,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   },
   {
     "id": 5,
@@ -47,7 +55,9 @@
     "oldPrice": 48.8,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 50
+    "discountPercentage": 50,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   },
   {
     "id": 6,
@@ -57,7 +67,9 @@
     "oldPrice": 48.8,
     "isNew": true,
     "hasDiscount": false,
-    "discountPercentage": 0
+    "discountPercentage": 0,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   },
   {
     "id": 7,
@@ -67,7 +79,9 @@
     "oldPrice": 48.8,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 35
+    "discountPercentage": 35,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   },
   {
     "id": 8,
@@ -77,6 +91,8 @@
     "oldPrice": 48.8,
     "isNew": true,
     "hasDiscount": true,
-    "discountPercentage": 25
+    "discountPercentage": 25,
+    "color": ["Red", "Blue", "Black"],
+    "size": ["P", "M", "G", "GG"]
   }
 ]

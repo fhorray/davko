@@ -1,12 +1,12 @@
 import React from "react";
 import CartIcon from "../../assets/images/cart-icon.svg";
 
-const AddButton = ({ onClick }) => {
+const AddButton = (props) => {
   return (
-    <a className="add-btn" href="#" onClick={onClick}>
+    <button className="add-btn" type="button" onClick={() => onClick}>
       <img src={CartIcon} alt="Cart Icon" />
       ADD
-    </a>
+    </button>
   );
 };
 
