@@ -1,7 +1,14 @@
 import React from "react";
-import AddButton from "../AddButton/AddButton";
-import CartIcon from "../../assets/images/cart-icon.svg";
+import ReactDOM from "react-dom";
 import { CartContext } from "../../context/cartContext";
+
+// FONTAWESOME ICONS
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleLeft,
+  faAngleRight,
+  faTrashCan,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Product = (props) => {
   // PROPS
@@ -18,7 +25,11 @@ const Product = (props) => {
     color,
     size,
     quantity,
+    removeItem,
   } = props;
+
+  const { addToCart, cartItems, removeFromCart, removeOneFromCart } =
+    React.useContext(CartContext);
 
   return (
     <div className={inCart ? "item in-cart" : "item out-cart"}>
@@ -33,6 +44,13 @@ const Product = (props) => {
 
       <div className="info">
         <div className="product-info">
+          {inCart ? (
+            <FontAwesomeIcon
+              className="del-btn"
+              icon={faTrashCan}
+              onClick={removeFromCart} // Atualizada a chamada da função
+            />
+          ) : null}
           <h3>{title}</h3>
           {inCart ? (
             <div className="size-color">
@@ -43,7 +61,21 @@ const Product = (props) => {
           ) : null}
         </div>
         <div className="price-info">
-          {inCart ? <span className="quantity">{quantity}</span> : null}
+          {inCart ? (
+            <span className="quantity">
+              <FontAwesomeIcon
+                className="angle left"
+                icon={faAngleLeft}
+                onClick={removeOneFromCart}
+              />
+              {quantity}
+              <FontAwesomeIcon
+                className="angle right"
+                icon={faAngleRight}
+                onClick={addToCart}
+              />
+            </span>
+          ) : null}
           {inCart ? (
             <span className="value">${Math.floor(price * quantity)}</span>
           ) : (

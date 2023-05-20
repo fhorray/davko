@@ -18,7 +18,8 @@ const ProductList = (props) => {
     jsonContent = [];
   }
 
-  const { addToCart, cartItems } = React.useContext(CartContext);
+  const { addToCart, cartItems, removeFromCart } =
+    React.useContext(CartContext);
 
   const handleAddToCart = (product) => {
     const hasItem = cartItems.find((item) => item.id === product.id);
@@ -31,13 +32,10 @@ const ProductList = (props) => {
     }
   };
 
-  const { totalItems } = React.useContext(CartContext);
-
   return (
     <section className="product-list">
       <div className="container">
         {jsonContent.map((product) => {
-          // const hasItem = cartItems.find((item) => item.id === product.id);
           return (
             <div key={product.id}>
               <Product
@@ -53,6 +51,7 @@ const ProductList = (props) => {
                   cartItems.find((item) => item.id === product.id)?.quantity ||
                   null
                 }
+                onClick={() => handleRemoveFromCart(product)}
               />
               <button
                 className="add-btn"

@@ -19,10 +19,25 @@ export const CartProvider = ({ children }) => {
       setCartItems([...cartItems, { ...item, quantity: 1 }]);
     }
   };
+  const removeOneFromCart = (item) => {
+    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+    if (existingItem) {
+      setCartItems(
+        cartItems.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...item, quantity: 1 }]);
+    }
+  };
 
   const removeFromCart = (item) => {
     const updateCart = cartItems.filter((cartItem) => cartItem.id !== item.id);
     setCartItems(updateCart);
+    console.log("excluido");
   };
   const clearCart = () => {
     setCartItems([]);
@@ -36,6 +51,7 @@ export const CartProvider = ({ children }) => {
   const cartContextValue = {
     cartItems,
     addToCart,
+    removeOneFromCart,
     removeFromCart,
     clearCart,
     totalItems,

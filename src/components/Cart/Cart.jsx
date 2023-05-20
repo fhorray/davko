@@ -7,6 +7,10 @@ const Cart = () => {
     React.useContext(CartContext);
   console.log(cartItems);
 
+  const handleRemoveFromCart = (product) => {
+    removeFromCart(product);
+  };
+
   // TOTAL ITEMS
   const totalItems = cartItems.reduce(
     (sum, currentProduct) => sum + currentProduct.quantity,
@@ -16,12 +20,8 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="buttons">
-        <a className="btn white" href="#">
-          View Bag ({totalItems})
-        </a>
-        <a className="btn black" href="#">
-          Checkout
-        </a>
+        <button className="btn white">View Bag ({totalItems})</button>
+        <button className="btn black">Checkout</button>
       </div>
       <ul className="cart-list">
         {cartItems.map(({ image, title, id, color, size, price, quantity }) => (
@@ -36,6 +36,7 @@ const Cart = () => {
             size={size}
             color={color}
             oldPrice={false}
+            onClick={() => removeFromCart({ product })}
           />
         ))}
       </ul>
