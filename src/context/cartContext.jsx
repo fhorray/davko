@@ -16,7 +16,6 @@ export const CartProvider = ({ children }) => {
     setCartItems([]);
   };
 
-  // TOTAL ITEMS
   const totalItems = cartItems.reduce(
     (sum, currentProduct) => sum + currentProduct.quantity,
     0

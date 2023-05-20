@@ -20,8 +20,6 @@ const Product = (props) => {
     quantity,
   } = props;
 
-  const { totalItems } = React.useContext(CartContext);
-
   return (
     <div className={inCart ? "item in-cart" : "item out-cart"}>
       <div className="image-box">
@@ -39,7 +37,7 @@ const Product = (props) => {
           {inCart ? (
             <div className="size-color">
               <span>ID: {id}</span>
-              <span>Color: {color[0]}</span>
+              <span>Color: {color}</span>
               <span>Size: {size}</span>
             </div>
           ) : null}

@@ -20,16 +20,23 @@ const ProductList = (props) => {
 
   const { addToCart, cartItems } = React.useContext(CartContext);
   const handleAddToCart = (product) => {
-    addToCart(product);
-    console.log(product);
+    const hasItem = cartItems.find((item) => item.id === product.id);
+    if (hasItem) {
+      console.log(`tem`);
+      addToCart({ ...product, quantity: product.quantity + 1 });
+    } else {
+      addToCart({ ...product, quantity: 1 });
+      console.log(product);
+    }
   };
-  console.log(cartItems);
+
+  const { totalItems } = React.useContext(CartContext);
 
   return (
     <section className="product-list">
       <div className="container">
         {jsonContent.map((product) => (
-          <div>
+          <div key={product.id}>
             <Product
               id={product.id}
               image={product.image}
@@ -39,7 +46,6 @@ const ProductList = (props) => {
               isNew={product.isNew}
               hasDiscount={product.hasDiscount}
               discountPercentage={product.discountPercentage}
-              key={product.id}
               quantity={product.quantity}
             />
             <button

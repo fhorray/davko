@@ -33,7 +33,7 @@ const Cart = () => {
             title={title}
             price={price}
             quantity={quantity}
-            size={size[0]}
+            size={size}
             color={color}
             oldPrice={false}
           />
