@@ -19,11 +19,12 @@ const ProductList = (props) => {
   }
 
   const { addToCart, cartItems } = React.useContext(CartContext);
+
   const handleAddToCart = (product) => {
     const hasItem = cartItems.find((item) => item.id === product.id);
     if (hasItem) {
-      console.log(`tem`);
-      addToCart({ ...product, quantity: product.quantity + 1 });
+      console.log("tem");
+      addToCart({ ...product, quantity: hasItem.quantity + 1 });
     } else {
       addToCart({ ...product, quantity: 1 });
       console.log(product);
@@ -35,29 +36,35 @@ const ProductList = (props) => {
   return (
     <section className="product-list">
       <div className="container">
-        {jsonContent.map((product) => (
-          <div key={product.id}>
-            <Product
-              id={product.id}
-              image={product.image}
-              title={product.title}
-              price={product.price}
-              oldPrice={product.oldPrice}
-              isNew={product.isNew}
-              hasDiscount={product.hasDiscount}
-              discountPercentage={product.discountPercentage}
-              quantity={product.quantity}
-            />
-            <button
-              className="add-btn"
-              type="button"
-              onClick={() => handleAddToCart(product)}
-            >
-              <img src={CartIcon} alt="Cart Icon" />
-              ADD
-            </button>
-          </div>
-        ))}
+        {jsonContent.map((product) => {
+          // const hasItem = cartItems.find((item) => item.id === product.id);
+          return (
+            <div key={product.id}>
+              <Product
+                id={product.id}
+                image={product.image}
+                title={product.title}
+                price={product.price}
+                oldPrice={product.oldPrice}
+                isNew={product.isNew}
+                hasDiscount={product.hasDiscount}
+                discountPercentage={product.discountPercentage}
+                quantity={
+                  cartItems.find((item) => item.id === product.id)?.quantity ||
+                  null
+                }
+              />
+              <button
+                className="add-btn"
+                type="button"
+                onClick={() => handleAddToCart(product)}
+              >
+                <img src={CartIcon} alt="Cart Icon" />
+                ADD
+              </button>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
