@@ -25,10 +25,9 @@ const Product = (props) => {
     color,
     size,
     quantity,
-    removeItem,
   } = props;
 
-  const { addToCart, cartItems, removeFromCart, removeOneFromCart } =
+  const { addToCart, removeFromCart, removeOne } =
     React.useContext(CartContext);
 
   return (
@@ -48,7 +47,7 @@ const Product = (props) => {
             <FontAwesomeIcon
               className="del-btn"
               icon={faTrashCan}
-              onClick={removeFromCart} // Atualizada a chamada da função
+              onClick={() => removeFromCart({ id })}
             />
           ) : null}
           <h3>{title}</h3>
@@ -66,13 +65,19 @@ const Product = (props) => {
               <FontAwesomeIcon
                 className="angle left"
                 icon={faAngleLeft}
-                onClick={removeOneFromCart}
+                onClick={() => {
+                  if (quantity > 1) {
+                    removeOne({ id });
+                  } else {
+                    removeFromCart({ id });
+                  }
+                }}
               />
               {quantity}
               <FontAwesomeIcon
                 className="angle right"
                 icon={faAngleRight}
-                onClick={addToCart}
+                onClick={() => addToCart({ ...props, quantity: 1 })}
               />
             </span>
           ) : null}

@@ -156,6 +156,7 @@
           padding: 0.7rem;
           @include flex(row, space-between, center);
           gap: 2rem;
+          user-select: none;
           .angle {
             font-weight: 400;
             cursor: pointer;

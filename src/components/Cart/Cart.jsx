@@ -7,10 +7,6 @@ const Cart = () => {
     React.useContext(CartContext);
   console.log(cartItems);
 
-  const handleRemoveFromCart = (product) => {
-    removeFromCart(product);
-  };
-
   // TOTAL ITEMS
   const totalItems = cartItems.reduce(
     (sum, currentProduct) => sum + currentProduct.quantity,
