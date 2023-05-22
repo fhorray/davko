@@ -6,10 +6,12 @@ import ProductList from "./components/ProductList/ProductList";
 import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./context/cartContext";
+import ProductModal from "./components/ProductModal/ProductModal";
 
 function App() {
   return (
     <CartProvider>
+      <ProductModal />
       <Header />
       <Banner />
 

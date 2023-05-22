@@ -1,0 +1,15 @@
+.add-btn {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  background-color: $brand-black;
+  border: none;
+  color: #fff;
+  @include flex(row, center, center);
+  gap: 1rem;
+  @include transition(0.2s);
+  &:hover {
+    background-color: #292d39;
+  }
+}

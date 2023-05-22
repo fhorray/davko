@@ -5,6 +5,7 @@ import LuxuryItems from "../../data/luxury-products.json";
 import AddButton from "../AddButton/AddButton";
 import { CartContext } from "../../context/cartContext";
 import CartIcon from "../../assets/images/cart-icon.svg";
+import ProductModal from "../ProductModal/ProductModal";
 
 const ProductList = (props) => {
   const listName = props.listName;
@@ -18,8 +19,7 @@ const ProductList = (props) => {
     jsonContent = [];
   }
 
-  const { addToCart, cartItems, removeFromCart } =
-    React.useContext(CartContext);
+  const { addToCart, cartItems } = React.useContext(CartContext);
 
   const handleAddToCart = (product) => {
     const hasItem = cartItems.find((item) => item.id === product.id);
@@ -53,14 +53,7 @@ const ProductList = (props) => {
                 }
                 onClick={() => handleRemoveFromCart(product)}
               />
-              <button
-                className="add-btn"
-                type="button"
-                onClick={() => handleAddToCart(product)}
-              >
-                <img src={CartIcon} alt="Cart Icon" />
-                ADD
-              </button>
+              <AddButton onClick={() => handleAddToCart(product)} />
             </div>
           );
         })}

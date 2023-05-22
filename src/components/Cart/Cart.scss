@@ -6,6 +6,7 @@
   max-width: 41rem;
   z-index: 888;
   box-shadow: 0 3rem 5rem 0 rgba($brand-black, 0.2);
+  transition: all 0.2s ease-in;
   .cart-list {
     height: 49.5rem;
     padding: 2rem 1.5rem;
