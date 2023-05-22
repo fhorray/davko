@@ -2,9 +2,8 @@ import React from "react";
 import Product from "../Product/Product";
 import { CartContext } from "../../context/cartContext";
 
-const Cart = () => {
-  const { cartItems, clearCart, removeFromCart } =
-    React.useContext(CartContext);
+const Cart = ({ onMouseLeave }) => {
+  const { cartItems, removeFromCart } = React.useContext(CartContext);
   console.log(cartItems);
 
   // TOTAL ITEMS
@@ -14,7 +13,7 @@ const Cart = () => {
   );
 
   return (
-    <div className="cart">
+    <div className="cart" onMouseLeave={onMouseLeave}>
       <div className="buttons">
         <button className="btn white">View Bag ({totalItems})</button>
         <button className="btn black">Checkout</button>

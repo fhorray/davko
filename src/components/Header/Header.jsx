@@ -15,7 +15,7 @@ const Header = () => {
   let [openAcc, setOpenAcc] = React.useState(false);
 
   function openModalAccount() {
-    setOpenAcc(true);
+    setOpenAcc(!openAcc);
   }
 
   // CART MODAL
@@ -23,12 +23,13 @@ const Header = () => {
 
   function openCartModal() {
     setOpenCart(!openCart);
+    console.log("modal cart aberto");
   }
 
   return (
     <>
       {/* MODALS */}
-      {openAcc ? <AccountModal setOpenAcc={setOpenAcc} /> : ""}
+      {openAcc ? <AccountModal setOpenAcc={setOpenAcc} /> : null}
 
       {/* MAIN MESSAGE */}
       <div className="main-message">
@@ -73,12 +74,12 @@ const Header = () => {
             <li onClick={openModalAccount}>
               <img src={UserIcon} alt="User Icon" />
             </li>
-            <li onClick={openCartModal}>
+            <li onMouseEnter={openCartModal}>
               <img src={CartIcon} alt="Cart Icon" />
             </li>
           </ul>
           {/* CART */}
-          {openCart ? <Cart setOpenCart={setOpenCart} /> : ""}
+          {openCart ? <Cart onMouseLeave={openCartModal} /> : null}
         </div>
       </header>
     </>
