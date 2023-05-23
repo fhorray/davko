@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Product from "../Product/Product";
 import NewArrivals from "../../data/new-arrivals.json";
 import LuxuryItems from "../../data/luxury-products.json";
@@ -6,6 +6,7 @@ import AddButton from "../AddButton/AddButton";
 import { CartContext } from "../../context/cartContext";
 import CartIcon from "../../assets/images/cart-icon.svg";
 import ProductModal from "../ProductModal/ProductModal";
+import { ProductModalContext } from "../../context/productModalContext";
 
 const ProductList = (props) => {
   const listName = props.listName;
@@ -19,6 +20,7 @@ const ProductList = (props) => {
     jsonContent = [];
   }
 
+  // CART CONTEXT
   const { addToCart, cartItems } = React.useContext(CartContext);
 
   const handleAddToCart = (product) => {
@@ -32,8 +34,12 @@ const ProductList = (props) => {
     }
   };
 
+  // PRODUCT MODAL
+  const { openModal, isOpen } = useContext(ProductModalContext);
+
   return (
     <section className="product-list">
+      {isOpen ? <ProductModal /> : null}
       <div className="container">
         {jsonContent.map((product) => {
           return (
@@ -53,7 +59,7 @@ const ProductList = (props) => {
                 }
                 onClick={() => handleRemoveFromCart(product)}
               />
-              <AddButton onClick={() => handleAddToCart(product)} />
+              <AddButton onClick={() => openModal(product)} />
             </div>
           );
         })}

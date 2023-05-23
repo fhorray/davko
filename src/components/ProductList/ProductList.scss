@@ -5,5 +5,6 @@
     @include flex(row, center, center);
     flex-wrap: wrap;
     gap: 1.3rem;
+    position: relative;
   }
 }

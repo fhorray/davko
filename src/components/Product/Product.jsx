@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import { CartContext } from "../../context/cartContext";
 
@@ -9,6 +9,7 @@ import {
   faAngleRight,
   faTrashCan,
 } from "@fortawesome/free-solid-svg-icons";
+import { ProductModalContext } from "../../context/productModalContext";
 
 const Product = (props) => {
   // PROPS
@@ -27,13 +28,17 @@ const Product = (props) => {
     quantity,
   } = props;
 
+  // CART CONTEXT
   const { addToCart, removeFromCart, removeOne } =
     React.useContext(CartContext);
+
+  // PRODUCT MODAL
+  const { openModal, isOpen } = useContext(ProductModalContext);
 
   return (
     <div className={inCart ? "item in-cart" : "item out-cart"}>
       <div className="image-box">
-        <img src={image} alt="Product Item" />
+        <img src={image} alt="Product Item" onClick={openModal} />
 
         {isNew ? <span className="new">New</span> : ""}
         {hasDiscount ? (

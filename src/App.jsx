@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useContext } from "react";
 import Header from "./components/Header/Header";
 import Banner from "./components/Banner/Banner";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
@@ -7,31 +7,37 @@ import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./context/cartContext";
 import ProductModal from "./components/ProductModal/ProductModal";
+import {
+  ProductModalContext,
+  ProductModalProvider,
+} from "./context/productModalContext";
 
 function App() {
   return (
     <CartProvider>
-      <ProductModal />
-      <Header />
-      <Banner />
+      <ProductModalProvider>
+        {/* <ProductModal /> */}
+        <Header />
+        <Banner />
 
-      {/* NEW ARRIVALS */}
-      <SectionTitle
-        title="New Arrivals"
-        hasDescription={true}
-        description={"Explore our new-in products"}
-      />
-      <ProductList listName="NewArrivals" />
+        {/* NEW ARRIVALS */}
+        <SectionTitle
+          title="New Arrivals"
+          hasDescription={true}
+          description={"Explore our new-in products"}
+        />
+        <ProductList listName="NewArrivals" />
 
-      <SectionTitle
-        title="Our Luxury Items"
-        hasDescription={false}
-        description={null}
-      />
-      <ProductList listName="LuxuryItems" />
+        <SectionTitle
+          title="Our Luxury Items"
+          hasDescription={false}
+          description={null}
+        />
+        <ProductList listName="LuxuryItems" />
 
-      {/* FOOTER */}
-      <Footer />
+        {/* FOOTER */}
+        <Footer />
+      </ProductModalProvider>
     </CartProvider>
   );
 }
