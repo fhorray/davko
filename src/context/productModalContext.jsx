@@ -3,9 +3,12 @@ import React, { createContext, useState } from "react";
 // Cria o contexto do modal
 export const ProductModalContext = createContext();
 
-// Componente provedor do contexto
+// PROVIDER
 export const ProductModalProvider = ({ children }) => {
+  // useState para setar o modal como aberto ou fechado
   const [isOpen, setIsOpen] = useState(false);
+
+  // useState ára setar o produto selecionado ao clicar no AddButton do Product list e mostrar as informações no modal.
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   // Função para abrir o modal com um produto específico

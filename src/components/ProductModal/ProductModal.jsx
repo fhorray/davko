@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { ProductModalContext } from "../../context/productModalContext";
 
 // ICONS
-import MainImage from "../../assets/images/product-images/product-01.png";
 import StarBright from "../../assets/images/star-bright-i.svg";
 import StarLight from "../../assets/images/star-light-i.svg";
 
@@ -15,12 +14,29 @@ import {
   faTrashCan,
 } from "@fortawesome/free-solid-svg-icons";
 import ColorSizeForm from "./ColorForm/ColorSizeForm";
+import { CartContext } from "../../context/cartContext";
 
 const ProductModal = (props) => {
-  // PROPS
-  const { title, image, id } = props;
+  // CART CONTEXT
+  const { addToCart } = useContext(CartContext);
 
-  const { closeModal } = useContext(ProductModalContext);
+  // Context do produto selecionado ao clicar no AddButton do ProductList
+  const { selectedProduct, closeModal } = useContext(ProductModalContext);
+
+  // FUNÇÃO DO RATING DO PRODUTO
+  const renderComponent = (number) => {
+    const maxTimes = Math.min(number, 5);
+    const components = [];
+
+    for (let i = 0; i < maxTimes; i++) {
+      components.push(
+        <img src={StarBright} alt="Start" key={selectedProduct.id} />
+      );
+    }
+
+    return components;
+  };
+
   return (
     <div className="product-modal-overlay">
       <div className="product-info-container">
@@ -33,46 +49,33 @@ const ProductModal = (props) => {
         {/* IMAGES AREA */}
         <div className="images">
           <div className="main-img-box">
-            <img src={MainImage} alt="Main Image" />
+            <img src={selectedProduct.image} alt="Main Image" />
           </div>
-          {/* MORE IMAGES */}
+          {/* SECONDARY IMAGES */}
           <ul className="more-images">
-            <li>
-              <img src={MainImage} alt="Main Image" />
-            </li>
-            <li>
-              <img src={MainImage} alt="Main Image" />
-            </li>
-            <li>
-              <img src={MainImage} alt="Main Image" />
-            </li>
+            {selectedProduct.secondaryImages.map((image) => (
+              <li key={selectedProduct.title}>
+                <img src={image} alt="Main Image" />
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* PRODUCT INFORMATION AREA */}
         <div className="info-container">
-          <h3>{props.title}</h3>
+          <h3>{selectedProduct.title}</h3>
           <div className="id-stars">
-            <span>ID: 123456</span>
+            <span>ID: {selectedProduct.id}</span>
             <div className="star">
-              <img src={StarBright} alt="Start" />
-              <img src={StarBright} alt="Start" />
-              <img src={StarBright} alt="Start" />
-              <img src={StarBright} alt="Start" />
-              <img src={StarLight} alt="Start" />
+              <span>({selectedProduct.rating})</span>
+              {renderComponent(selectedProduct.rating)}
             </div>
           </div>
 
           {/* DESCRIPTION */}
           <div className="description">
             <h5>Description:</h5>
-            <p>
-              Elevate your style with the luxurious Striped Button-Up Shirt,
-              crafted with meticulous attention to detail, refined design, and a
-              harmonious color palette. Its premium fabric, slim-fit silhouette,
-              and tailored elements exude sophistication and timeless charm,
-              making it a must-have addition to any wardrobe.
-            </p>
+            <p>{selectedProduct.description}</p>
           </div>
 
           <ColorSizeForm />

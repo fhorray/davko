@@ -24,7 +24,7 @@
 }
 
 header {
-  padding: 4.4rem;
+  padding: 4.4rem 0;
   margin-bottom: 2.4rem;
   .container {
     position: relative;
@@ -34,6 +34,7 @@ header {
   .navbar {
     ul {
       @include flex(row, space-between, center);
+      flex-wrap: wrap;
       li {
         a {
           color: inherit;
@@ -59,8 +60,17 @@ header {
       }
     }
   }
-
   .logo {
     margin-left: -11rem;
+  }
+
+  // RESPONSIVE
+  @include responsive(890px) {
+    .navbar {
+      display: none;
+    }
+    .logo {
+      margin: 0;
+    }
   }
 }

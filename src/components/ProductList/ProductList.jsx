@@ -4,7 +4,6 @@ import NewArrivals from "../../data/new-arrivals.json";
 import LuxuryItems from "../../data/luxury-products.json";
 import AddButton from "../AddButton/AddButton";
 import { CartContext } from "../../context/cartContext";
-import CartIcon from "../../assets/images/cart-icon.svg";
 import ProductModal from "../ProductModal/ProductModal";
 import { ProductModalContext } from "../../context/productModalContext";
 
@@ -23,20 +22,10 @@ const ProductList = (props) => {
   // CART CONTEXT
   const { addToCart, cartItems } = React.useContext(CartContext);
 
-  const handleAddToCart = (product) => {
-    const hasItem = cartItems.find((item) => item.id === product.id);
-    if (hasItem) {
-      console.log("tem");
-      addToCart({ ...product, quantity: hasItem.quantity + 1 });
-    } else {
-      addToCart({ ...product, quantity: 1 });
-      console.log(product);
-    }
-  };
-
   // PRODUCT MODAL
   const { openModal, isOpen } = useContext(ProductModalContext);
 
+  // AQUI VAI SER RETORNADO A LISTA DE PRODUTOS
   return (
     <section className="product-list">
       {isOpen ? <ProductModal /> : null}

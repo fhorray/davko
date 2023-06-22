@@ -6,6 +6,13 @@
   align-items: $align;
 }
 
+// RESPONSIVE
+@mixin responsive($mediaWidth) {
+  @media (max-width: $mediaWidth) {
+    @content;
+  }
+}
+
 // TRANSITION
 @mixin transition($time) {
   transition: all $time ease-in;

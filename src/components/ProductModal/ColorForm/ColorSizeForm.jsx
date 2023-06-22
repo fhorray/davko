@@ -2,17 +2,56 @@ import React, { useState } from "react";
 import AddButton from "../../AddButton/AddButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../../context/cartContext";
+import { ProductModalContext } from "../../../context/productModalContext";
 
 function ColorSizeForm() {
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
 
+  // Quantidade de items no modal antes de clicar nas setas para incrementar e decrementar
+  const [itemQuantity, setItemQuantity] = useState(1);
+  // INCREMENTAR
+  function incrementItems() {
+    setItemQuantity(itemQuantity + 1);
+  }
+  // DECREMENTAR
+  function decrementItems() {
+    if (itemQuantity <= 1) {
+      setItemQuantity(1);
+    } else {
+      setItemQuantity(itemQuantity - 1);
+    }
+  }
+
+  // CART CONTEXT
+  const { addToCart, cartItems, setCartItems } = React.useContext(CartContext);
+
+  // Context do produto selecionado ao clicar no AddButton do ProductList
+  const { selectedProduct, closeModal } = React.useContext(ProductModalContext);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Lógica para lidar com os dados do formulário
-    console.log("color selecionada:", color);
-    console.log("size selecionado:", size);
+    // LOGICA DO FORM AO SER ENVIADO
   };
+
+  // ADICIONAR AO CARRINHO
+  const handleAddToCart = (product) => {
+    const hasItem = cartItems.find((item) => item.id === product.id);
+
+    // SE O ITEM JA EXISTIR OU NÃO NO CART
+    if (hasItem) {
+      addToCart({ ...product, quantity: hasItem.quantity + 1 });
+    } else {
+      addToCart({ ...product, quantity: 1 });
+      console.log(product);
+    }
+    console.log(product.title);
+    closeModal();
+  };
+  console.log("color: ", color);
+  console.log("size: ", size);
+  console.log("quanity:", itemQuantity);
 
   return (
     <form className="size-color" onSubmit={handleSubmit}>
@@ -71,7 +110,8 @@ function ColorSizeForm() {
               name="color"
               value="red"
               checked={color === "red"}
-              onChange={(event) => setcolor(event.target.value)}
+              onChange={(event) => setColor(event.target.value)}
+              style={{ backgroundColor: "tomato" }}
             />
           </label>
           <label>
@@ -80,7 +120,8 @@ function ColorSizeForm() {
               name="color"
               value="blue"
               checked={color === "blue"}
-              onChange={(event) => setcolor(event.target.value)}
+              onChange={(event) => setColor(event.target.value)}
+              style={{ backgroundColor: "lightblue" }}
             />
           </label>
           <label>
@@ -89,7 +130,8 @@ function ColorSizeForm() {
               name="color"
               value="pink"
               checked={color === "pink"}
-              onChange={(event) => setcolor(event.target.value)}
+              onChange={(event) => setColor(event.target.value)}
+              style={{ backgroundColor: "lightpink" }}
             />
           </label>
           <label>
@@ -98,7 +140,8 @@ function ColorSizeForm() {
               name="color"
               value="black"
               checked={color === "black"}
-              onChange={(event) => setcolor(event.target.value)}
+              onChange={(event) => setColor(event.target.value)}
+              style={{ backgroundColor: "darkgrey" }}
             />
           </label>
         </div>
@@ -110,22 +153,16 @@ function ColorSizeForm() {
           <FontAwesomeIcon
             className="angle left"
             icon={faAngleLeft}
-            onClick={() => {
-              if (quantity > 1) {
-                removeOne({ id });
-              } else {
-                removeFromCart({ id });
-              }
-            }}
+            onClick={() => decrementItems()}
           />
-          {"0"}
+          {itemQuantity}
           <FontAwesomeIcon
             className="angle right"
             icon={faAngleRight}
-            onClick={() => addToCart({ ...props, quantity: 1 })}
+            onClick={() => incrementItems()}
           />
         </span>
-        <AddButton />
+        <AddButton onClick={() => handleAddToCart(selectedProduct)} />
       </div>
     </form>
   );

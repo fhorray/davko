@@ -2,6 +2,11 @@
   {
     "id": 1,
     "image": "/src/assets/images/product-images/product-01.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-05.png",
+      "/src/assets/images/product-images/product-04.png",
+      "/src/assets/images/product-images/product-02.png"
+    ],
     "title": "Striped Button-Up Shirt",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -10,11 +15,18 @@
     "discountPercentage": 25,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 5,
+    "description": "Elevate your style with the Striped Button-Up Shirt. Crafted with attention to detail, this shirt features a timeless striped pattern that adds a touch of sophistication to your look. Made from high-quality materials, it offers comfort and durability. The discounted price makes it a great value for your money. Whether you're dressing up for a formal occasion or going for a smart casual look, this shirt is a versatile choice that never goes out of style."
   },
   {
     "id": 2,
     "image": "/src/assets/images/product-images/product-02.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-10.png",
+      "/src/assets/images/product-images/product-15.png",
+      "/src/assets/images/product-images/product-03.png"
+    ],
     "title": "Denim Jeans",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -23,11 +35,18 @@
     "discountPercentage": 50,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 5,
+    "description": "Experience both style and comfort with the Denim Jeans. These classic jeans are crafted from high-quality denim fabric, ensuring durability and a flattering fit. The timeless design makes them a versatile choice for various outfits and occasions. With their discounted price, these jeans offer great value for your money. Upgrade your denim collection and enjoy the perfect combination of fashion and comfort."
   },
   {
     "id": 3,
     "image": "/src/assets/images/product-images/product-03.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-16.png",
+      "/src/assets/images/product-images/product-13.png",
+      "/src/assets/images/product-images/product-08.png"
+    ],
     "title": "Floral Print Dress",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -36,11 +55,18 @@
     "discountPercentage": 50,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 4,
+    "description": "Step into style with the Floral Print Dress. This elegant dress features a beautiful floral pattern that adds a feminine touch to your wardrobe. Made from high-quality materials, it offers both comfort and durability. Whether you're attending a wedding, a garden party, or a special event, this dress is a perfect choice. With its discounted price, you can enjoy both fashion and savings. Embrace the beauty of nature and express your unique style with this stunning floral print dress."
   },
   {
     "id": 4,
     "image": "/src/assets/images/product-images/product-04.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-14.png",
+      "/src/assets/images/product-images/product-13.png",
+      "/src/assets/images/product-images/product-03.png"
+    ],
     "title": "Black Trousers",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -49,11 +75,18 @@
     "discountPercentage": 0,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 3,
+    "description": "Add a sleek and versatile piece to your wardrobe with the Black Trousers. These classic trousers are designed to offer a comfortable and flattering fit. Made from high-quality fabric, they are suitable for both casual and formal occasions. The timeless black color ensures easy pairing with a variety of tops and shoes. While these trousers don't currently have a discount, they are still a great investment due to their quality and versatility."
   },
   {
     "id": 5,
     "image": "/src/assets/images/product-images/product-05.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-12.png",
+      "/src/assets/images/product-images/product-11.png",
+      "/src/assets/images/product-images/product-09.png"
+    ],
     "title": "Striped Maxi Skirt",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -62,11 +95,18 @@
     "discountPercentage": 50,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 5,
+    "description": "Make a statement with the Striped Maxi Skirt. This fashionable skirt features a chic striped design that adds a touch of elegance to your outfit. Made from high-quality fabric, it offers comfort and a flattering fit. The versatile design allows you to dress it up or down for different occasions. With its discounted price, this maxi skirt offers great value for your money. Embrace your style and express your individuality with this stylish and trendy striped maxi skirt."
   },
   {
     "id": 6,
     "image": "/src/assets/images/product-images/product-06.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-16.png",
+      "/src/assets/images/product-images/product-12.png",
+      "/src/assets/images/product-images/product-03.png"
+    ],
     "title": "Basic White T-shirt",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -75,11 +115,18 @@
     "discountPercentage": 0,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 4,
+    "description": "Invest in a wardrobe essential with the Basic White T-shirt. This versatile t-shirt is a must-have for any fashion-conscious individual. Made from soft and breathable fabric, it offers comfort and easy movement. The classic white color allows for endless styling possibilities and ensures a timeless appeal. While this t-shirt doesn't currently have a discount, its high-quality construction and versatility make it a valuable addition to your collection."
   },
   {
     "id": 7,
     "image": "/src/assets/images/product-images/product-07.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-13.png",
+      "/src/assets/images/product-images/product-08.png",
+      "/src/assets/images/product-images/product-03.png"
+    ],
     "title": "Plaid Flannel Shirt",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -88,11 +135,18 @@
     "discountPercentage": 35,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 3,
+    "description": "Stay stylish and cozy with the Plaid Flannel Shirt. This classic shirt features a trendy plaid pattern that adds a touch of rugged charm to your look. Made from soft and warm flannel fabric, it provides both comfort and durability. The versatile design allows for easy pairing with jeans, trousers, or skirts. With its discounted price, this flannel shirt offers great value for your money. Embrace a casual and timeless style with this fashionable plaid flannel shirt."
   },
   {
     "id": 8,
     "image": "/src/assets/images/product-images/product-08.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-10.png",
+      "/src/assets/images/product-images/product-12.png",
+      "/src/assets/images/product-images/product-06.png"
+    ],
     "title": "Casual Striped Dress",
     "price": 28.8,
     "oldPrice": 48.8,
@@ -101,6 +155,8 @@
     "discountPercentage": 25,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 1,
+    "description": "Update your wardrobe with the Casual Striped Dress. This stylish dress features a relaxed silhouette and a chic striped pattern, perfect for a casual and effortless look. Made from high-quality fabric, it offers both comfort and durability. The discounted price makes it a great value for your money. Whether you're running errands or meeting friends for brunch, this striped dress is a versatile choice that combines fashion and comfort."
   }
 ]

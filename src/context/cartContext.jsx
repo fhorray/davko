@@ -5,6 +5,7 @@ export const CartContext = React.createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = React.useState([]);
 
+  // FUNÇÃO QUE VAI ADICIONAR ITEM NO CART
   const addToCart = (item) => {
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
@@ -48,6 +49,7 @@ export const CartProvider = ({ children }) => {
     0
   );
 
+  // Valor a ser utilizado no context abaixo.
   const cartContextValue = {
     cartItems,
     addToCart,
@@ -55,6 +57,7 @@ export const CartProvider = ({ children }) => {
     removeFromCart,
     clearCart,
     totalItems,
+    setCartItems,
   };
 
   return (

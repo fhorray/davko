@@ -2,6 +2,11 @@
   {
     "id": 9,
     "image": "/src/assets/images/product-images/product-09.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-16.png",
+      "/src/assets/images/product-images/product-11.png",
+      "/src/assets/images/product-images/product-01.png"
+    ],
     "title": "Blue Striped Shirt",
     "price": 39.9,
     "oldPrice": 59.9,
@@ -10,11 +15,18 @@
     "discountPercentage": 33,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 3,
+    "description": "The Blue Striped Shirt is a stylish and versatile piece that belongs in every wardrobe. Made from high-quality fabric, this shirt features a classic blue stripe pattern that adds a touch of sophistication to any outfit. It is designed to provide a comfortable fit and comes in multiple sizes to suit different body types. With its discounted price, you can enjoy both style and savings. Upgrade your fashion game with this timeless shirt."
   },
   {
     "id": 10,
     "image": "/src/assets/images/product-images/product-10.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-13.png",
+      "/src/assets/images/product-images/product-10.png",
+      "/src/assets/images/product-images/product-12.png"
+    ],
     "title": "Black Dress",
     "price": 19.99,
     "oldPrice": 29.99,
@@ -23,11 +35,18 @@
     "discountPercentage": 33,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 5,
+    "description": "Make a statement with the elegant Black Dress. This versatile dress is perfect for various occasions, from formal events to casual outings. The dress is made from high-quality materials, ensuring comfort and durability. It features a flattering design that accentuates your figure and a timeless black color that never goes out of style. With its discounted price, this dress offers unbeatable value for your money. Embrace sophistication and grace with this classic black dress."
   },
   {
     "id": 11,
     "image": "/src/assets/images/product-images/product-11.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-11.png",
+      "/src/assets/images/product-images/product-12.png",
+      "/src/assets/images/product-images/product-13.png"
+    ],
     "title": "Leather Jacket",
     "price": 12.5,
     "oldPrice": 24.9,
@@ -36,11 +55,18 @@
     "discountPercentage": 50,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 4,
+    "description": "Add a touch of edgy style to your wardrobe with the Leather Jacket. Crafted from high-quality leather, this jacket is not only fashionable but also durable and long-lasting. Its sleek design and versatile black color make it a perfect choice for various outfits and occasions. The jacket is available at a discounted price, allowing you to enjoy both style and affordability. Elevate your fashion game with this timeless leather jacket."
   },
   {
     "id": 12,
     "image": "/src/assets/images/product-images/product-12.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-08.png",
+      "/src/assets/images/product-images/product-08.png",
+      "/src/assets/images/product-images/product-05.png"
+    ],
     "title": "Floral Print Dress",
     "price": 15.99,
     "oldPrice": 19.99,
@@ -49,11 +75,18 @@
     "discountPercentage": 20,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 4,
+    "description": "Step into the world of elegance and femininity with the Floral Print Dress. This beautiful dress features a vibrant floral print that adds a pop of color to your wardrobe. Made from high-quality materials, it offers comfort and style in equal measure. The dress is designed to flatter your figure and is suitable for various occasions. With its discounted price, this floral print dress is a must-have for fashion-forward individuals."
   },
   {
     "id": 13,
     "image": "/src/assets/images/product-images/product-13.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-04.png",
+      "/src/assets/images/product-images/product-02.png",
+      "/src/assets/images/product-images/product-10.png"
+    ],
     "title": "Striped Polo Shirt",
     "price": 9.99,
     "oldPrice": 14.99,
@@ -62,11 +95,18 @@
     "discountPercentage": 33,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 4,
+    "description": "Experience timeless style with the Striped Polo Shirt. Made from high-quality fabric, this shirt offers both comfort and durability. The classic striped design adds a touch of sophistication to your casual outfits. It comes in multiple sizes and colors, allowing you to find the perfect fit for your personal style. With its discounted price, this striped polo shirt provides excellent value for your money. Upgrade your wardrobe with this versatile and stylish piece."
   },
   {
     "id": 14,
     "image": "/src/assets/images/product-images/product-14.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-10.png",
+      "/src/assets/images/product-images/product-12.png",
+      "/src/assets/images/product-images/product-08.png"
+    ],
     "title": "Denim Jacket",
     "price": 49.99,
     "oldPrice": 59.99,
@@ -75,11 +115,18 @@
     "discountPercentage": 15,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 5,
+    "description": "Stay on-trend with the Denim Jacket. This classic wardrobe staple is made from high-quality denim, offering both style and durability. Its versatile design and timeless blue color make it a perfect complement to any outfit. Whether you're going for a casual or edgy look, this jacket has got you covered. With its discounted price, you can enjoy both fashion and savings. Embrace the cool and effortless vibe with this must-have denim jacket."
   },
   {
     "id": 15,
     "image": "/src/assets/images/product-images/product-15.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-16.png",
+      "/src/assets/images/product-images/product-15.png",
+      "/src/assets/images/product-images/product-01.png"
+    ],
     "title": "Striped Maxi Dress",
     "price": 34.5,
     "oldPrice": 44.5,
@@ -88,11 +135,18 @@
     "discountPercentage": 25,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 2,
+    "description": "Make a bold statement with the Striped Maxi Dress. This stunning dress features a striking striped pattern that demands attention. Made from high-quality materials, it offers both comfort and style. The maxi length adds a touch of elegance, while the adjustable waist tie allows for a customizable fit. With its discounted price, this dress is a fantastic choice for fashion-conscious individuals. Embrace sophistication and make heads turn with this eye-catching maxi dress."
   },
   {
     "id": 16,
     "image": "/src/assets/images/product-images/product-16.png",
+    "secondaryImages": [
+      "/src/assets/images/product-images/product-16.png",
+      "/src/assets/images/product-images/product-10.png",
+      "/src/assets/images/product-images/product-01.png"
+    ],
     "title": "Cotton T-shirt",
     "price": 34.5,
     "oldPrice": 44.5,
@@ -101,6 +155,8 @@
     "discountPercentage": 25,
     "color": ["Red", "Blue", "Black"],
     "size": ["P", "M", "G", "GG"],
-    "quantity": 0
+    "quantity": 0,
+    "rating": 5,
+    "description": "Experience ultimate comfort with the Cotton T-shirt. Made from soft and breathable cotton fabric, this t-shirt is perfect for everyday wear. It features a classic design that never goes out of style and comes in multiple colors to suit your preference. The discounted price makes it a great addition to your wardrobe without breaking the bank. Upgrade your basics collection with this comfortable and versatile cotton t-shirt."
   }
 ]
