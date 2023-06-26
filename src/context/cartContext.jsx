@@ -7,10 +7,12 @@ export const CartProvider = ({ children }) => {
   // Context do produto selecionado ao clicar no AddButton do ProductList
   const { closeModal } = React.useContext(ProductModalContext);
 
-  const [cartItems, setCartItems] = React.useState([]);
+  const [cartItems, setCartItems] = React.useState(() => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
 
-  // AREA DE FUNÇÕES DO PRODUCT MODAL
-
+  // AREA DE STATES DO PRODUCT MODAL
   let [color, setColor] = React.useState([]);
   let [size, setSize] = React.useState([]);
 
@@ -28,8 +30,6 @@ export const CartProvider = ({ children }) => {
       setItemQuantity(itemQuantity - 1);
     }
   }
-
-  // ===================================
 
   // FUNÇÃO QUE VAI ADICIONAR ITEM NO CART
   const addToCart = (item) => {
@@ -53,9 +53,24 @@ export const CartProvider = ({ children }) => {
         { ...item, quantity: itemQuantity, color: color, size: [size + " "] },
       ]);
     }
+
     closeModal();
     setItemQuantity(1);
   };
+
+  // SALVAR CARRINHO NO LOCAL STORAGE
+  React.useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  //  PEGAR PRODUTOS SALVOS NO LOCAL STORAGE
+  React.useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+
+    if (storedCart) {
+      setCartItems(JSON.parse(storedCart));
+    }
+  }, []);
 
   const addOne = (item) => {
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
@@ -81,17 +96,14 @@ export const CartProvider = ({ children }) => {
       );
     }
   };
-
   const removeFromCart = (item) => {
     const updateCart = cartItems.filter((cartItem) => cartItem.id !== item.id);
     setCartItems(updateCart);
     console.log("excluido");
   };
-
   const clearCart = () => {
     setCartItems([]);
   };
-
   const totalItems = cartItems.reduce(
     (sum, currentProduct) => sum + currentProduct.quantity,
     0

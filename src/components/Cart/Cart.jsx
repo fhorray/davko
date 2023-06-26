@@ -3,7 +3,8 @@ import Product from "../Product/Product";
 import { CartContext } from "../../context/cartContext";
 
 const Cart = ({ onMouseLeave }) => {
-  const { cartItems, removeFromCart } = React.useContext(CartContext);
+  const { setCartItems, cartItems, removeFromCart } =
+    React.useContext(CartContext);
   console.log(cartItems);
 
   // TOTAL ITEMS
