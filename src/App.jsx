@@ -14,8 +14,8 @@ import {
 
 function App() {
   return (
-    <CartProvider>
-      <ProductModalProvider>
+    <ProductModalProvider>
+      <CartProvider>
         {/* <ProductModal /> */}
         <Header />
         <Banner />
@@ -37,8 +37,8 @@ function App() {
 
         {/* FOOTER */}
         <Footer />
-      </ProductModalProvider>
-    </CartProvider>
+      </CartProvider>
+    </ProductModalProvider>
   );
 }
 

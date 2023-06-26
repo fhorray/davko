@@ -24,14 +24,12 @@ const ProductModal = (props) => {
   const { selectedProduct, closeModal } = useContext(ProductModalContext);
 
   // FUNÇÃO DO RATING DO PRODUTO
-  const renderComponent = (number) => {
+  const stars = (number) => {
     const maxTimes = Math.min(number, 5);
     const components = [];
 
     for (let i = 0; i < maxTimes; i++) {
-      components.push(
-        <img src={StarBright} alt="Start" key={selectedProduct.id} />
-      );
+      components.push(<img src={StarBright} alt="Start" key={[i]} />);
     }
 
     return components;
@@ -53,8 +51,8 @@ const ProductModal = (props) => {
           </div>
           {/* SECONDARY IMAGES */}
           <ul className="more-images">
-            {selectedProduct.secondaryImages.map((image) => (
-              <li key={selectedProduct.title}>
+            {selectedProduct.secondaryImages.map((image, index) => (
+              <li key={image[index]}>
                 <img src={image} alt="Main Image" />
               </li>
             ))}
@@ -68,7 +66,7 @@ const ProductModal = (props) => {
             <span>ID: {selectedProduct.id}</span>
             <div className="star">
               <span>({selectedProduct.rating})</span>
-              {renderComponent(selectedProduct.rating)}
+              {stars(selectedProduct.rating)}
             </div>
           </div>
 

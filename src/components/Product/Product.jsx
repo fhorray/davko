@@ -29,8 +29,7 @@ const Product = (props) => {
   } = props;
 
   // CART CONTEXT
-  const { addToCart, removeFromCart, removeOne } =
-    React.useContext(CartContext);
+  const { removeFromCart, removeOne, addOne } = React.useContext(CartContext);
 
   // PRODUCT MODAL
   const { openModal, isOpen } = useContext(ProductModalContext);
@@ -58,9 +57,15 @@ const Product = (props) => {
           <h3>{title}</h3>
           {inCart ? (
             <div className="size-color">
-              <span>ID: {id}</span>
-              <span>Color: {color}</span>
-              <span>Size: {size}</span>
+              <span>
+                <strong>ID:</strong> {id}
+              </span>
+              <span>
+                <strong>Color:</strong> {color}
+              </span>
+              <span>
+                <strong>Size:</strong> {size}
+              </span>
             </div>
           ) : null}
         </div>
@@ -82,7 +87,7 @@ const Product = (props) => {
               <FontAwesomeIcon
                 className="angle right"
                 icon={faAngleRight}
-                onClick={() => addToCart({ ...props, quantity: 1 })}
+                onClick={() => addOne({ ...props, quantity: 1 })}
               />
             </span>
           ) : null}
